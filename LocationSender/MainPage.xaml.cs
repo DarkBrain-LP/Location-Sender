@@ -122,8 +122,6 @@ public partial class MainPage : ContentPage
             if (requested == PermissionStatus.Granted)
             {
                 await ShareLocation();
-                Position.Text = $"({location.Longitude}, {location.Latitude})";
-                SemanticScreenReader.Announce(Position.Text);
             }
             else
             {
@@ -138,7 +136,7 @@ public partial class MainPage : ContentPage
         var locationRequest = new GeolocationRequest(GeolocationAccuracy.Best);
         var location = await Geolocation.GetLocationAsync(locationRequest);
 
-        Position.Text = $"({location.Longitude}, {location.Latitude})";
+        Position.Text = $"({Math.Round(location.Longitude, 2)}, {Math.Round(location.Latitude, 2)})";
         SemanticScreenReader.Announce(Position.Text);
 
         Console.WriteLine($"{location.Latitude} : {location.Longitude}");
