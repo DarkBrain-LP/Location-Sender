@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LocationSender.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+
+            <Image
+                Source="geolocation.jpg"
+                SemanticProperties.Description="Cute dot net bot waving hi to you!"
+                HeightRequest="200"
+                HorizontalOptions="Center" />
+
+            <Button x:Name="SetTimeIntervalBtn"
+                Text="Set Time Interval"
+                FontSize="Title"
+                Clicked="OnSetTimeIntervalClicked"/>
+            <Frame BackgroundColor="#7070B0"
+                   CornerRadius="50">
+                <StackLayout>
+                    <Label x:Name="Interval"
+                        Text="0 Seconds"
+                           TextColor="White"
+                           FontSize="Title"
+                           Margin="5"
+                           HorizontalOptions="Center"/>
+                    <Slider x:Name="TimeSlider"
+                        ValueChanged="OnSliderValueChanged"
+                        Minimum="0"
+                        Maximum="1800"/>
+                </StackLayout>
+            </Frame>
+
+
+            <Label x:Name="Position"
+                Text="(0, 0)"
+                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
+                FontSize="Title"
+                HorizontalOptions="Center" />
+
+            <Button
+                x:Name="SendBtn"
+                Text="Send Location"
+                FontSize="Title"
+                SemanticProperties.Hint="Send Location after every interval of time"
+                Clicked="OnSendBtnClicked" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

@@ -1,0 +1,1 @@
+C:\Users\ManU_LP\Desktop\LocationSender\LocationSender\LocationSender.csproj;x64
