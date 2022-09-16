@@ -1,2 +1,6 @@
 *.* linguist-detectable=false
+<<<<<<< HEAD
 *.cs linguist-detectable=true
+=======
+*.cs linguist-detectable=true
+>>>>>>> 3d93f234f03ccc66f8ad7f62b7196a2d63421a09
